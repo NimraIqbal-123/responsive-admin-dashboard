@@ -1,0 +1,266 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    padding:12px 20px;
+    z-index:1050;
+}
+
+.navbar-brand{
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.form-control-dark{
+    background:#343a40;
+    border:none;
+    color:#fff;
+    transition:.3s;
+}
+
+.form-control-dark::placeholder{
+    color:#ced4da;
+}
+
+.form-control-dark:focus{
+    background:#fff;
+    color:#212529;
+    box-shadow:0 0 10px rgba(13,110,253,.25);
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    background:#212529;
+    min-height:100vh;
+    position:fixed;
+    left:0;
+    top:56px;
+    width:230px;
+    overflow-y:auto;
+    padding-top:20px;
+}
+
+.sidebar hr{
+    border-color:#495057;
+}
+
+.sidebar .nav-link{
+    color:#ced4da;
+    margin:5px 12px;
+    padding:12px 15px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.sidebar .nav-link i{
+    transition:.3s;
+}
+
+.sidebar .nav-link:hover{
+    background:#0d6efd;
+    color:#fff;
+    transform:translateX(6px);
+}
+
+.sidebar .nav-link:hover i{
+    transform:scale(1.15);
+}
+
+.sidebar .nav-link.active{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.sidebar h6{
+    color:#adb5bd;
+    padding-left:15px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   OFFCANVAS
+=========================== */
+
+.offcanvas .nav-link{
+    color:#fff;
+    border-radius:8px;
+    margin:5px 0;
+    transition:.3s;
+}
+
+.offcanvas .nav-link:hover{
+    background:#0d6efd;
+    padding-left:18px;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+main{
+    margin-top:20px;
+    margin-left:230px;
+    padding-bottom:40px;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card{
+    border:none;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table{
+    margin-bottom:0;
+}
+
+.table thead{
+    background:#f8f9fa;
+}
+
+.table tbody tr{
+    transition:.3s;
+}
+
+.table tbody tr:hover{
+    background:#eef5ff;
+    cursor:pointer;
+}
+
+/* ===========================
+   BADGES
+=========================== */
+
+.badge{
+    padding:8px 12px;
+    border-radius:30px;
+    font-size:.8rem;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   CHART
+=========================== */
+
+canvas{
+    width:100%!important;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#adb5bd;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#6c757d;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.sidebar{
+    display:none;
+}
+
+main{
+    margin-left:0;
+}
+
+.form-control-dark{
+    display:none;
+}
+
+.navbar-brand{
+    font-size:1.1rem;
+}
+
+.card{
+    margin-bottom:20px;
+}
+
+.table{
+    font-size:14px;
+}
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.card,
+.table,
+.btn,
+.nav-link{
+    animation:fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
